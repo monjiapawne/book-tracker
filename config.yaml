@@ -1,0 +1,5 @@
+config:
+  progress_bar:
+    length: 20
+    fill_char: "▓"
+    empty_char: "░"

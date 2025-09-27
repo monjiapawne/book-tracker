@@ -1,0 +1,8 @@
+books:
+  - title: DevOps Handbook
+    author: Gene Kim
+    page: 2
+    total_pages: 434
+  - title: Fluent Python
+    page: 11
+    total_pages: 124
