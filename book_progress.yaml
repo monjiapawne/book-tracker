@@ -1,8 +1,21 @@
-books:
-  - title: DevOps Handbook
-    author: Gene Kim
-    page: 2
-    total_pages: 434
-  - title: Fluent Python
-    page: 11
-    total_pages: 124
+book_data:
+  - heading: Reading
+    books:
+    - title: Effective Python
+      page: 112
+      total_pages: 472
+  
+  - heading: Complete
+    books:
+    - title: DevOps HandBook
+      author: James Clear
+      page: 434
+      total_pages: 434
+
+  - heading: Interested
+    books:
+    - title: Atomic Habits
+      author: James Clear
+      page: 11
+      total_pages: 124
+  
