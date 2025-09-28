@@ -7,10 +7,10 @@ def render_progress_bar(progress: float, cfg: ProgressBarConfig):
 
     progress = progress / 100
     fill_amount = int(progress * cfg.length)
-    
+
     empty_amount = cfg.length - fill_amount
     pb = f"{fill * fill_amount}{empty * empty_amount}"
-    
+
     return pb
 
 

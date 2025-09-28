@@ -2,7 +2,7 @@ from app.io import parse_book_yaml, process_book
 from app.models import Book
 
 
-HEADER= """\
+HEADER = """\
 | Title        | Author | Progress                   | Page                 |
 |--------------|--------|----------------------------|----------------------|\n"""
 
@@ -19,5 +19,5 @@ def main_logic():
         for b in section["books"]:
             book = process_book(b)
             o += f"| {book.title} | {book.author} | {book.progress_bar} {book.progress}% | {book.page_progress} |\n"
-    
+
     return o
