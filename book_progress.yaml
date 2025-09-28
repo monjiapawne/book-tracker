@@ -5,10 +5,10 @@ book_data:
       page: 112
       total_pages: 472
 
-    - title: DevOps HandBook
-      author: James Clear
-      page: 434
-      total_pages: 434
+    - title: Site Reliability Engineering
+      author: 
+      page: 63
+      total_pages: 550
   
 
   - heading: Complete
