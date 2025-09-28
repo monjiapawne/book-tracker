@@ -4,13 +4,20 @@ book_data:
     - title: Effective Python
       page: 112
       total_pages: 472
+
+    - title: DevOps HandBook
+      author: James Clear
+      page: 434
+      total_pages: 434
   
+
   - heading: Complete
     books:
     - title: DevOps HandBook
       author: James Clear
       page: 434
       total_pages: 434
+
 
   - heading: Interested
     books:
