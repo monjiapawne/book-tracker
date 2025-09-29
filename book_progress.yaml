@@ -23,4 +23,6 @@ book_data:
     books:
     - title: Atomic Habits
       cover_art: site_reliability_engineering.png
+    - title: Atomic Habits
+      cover_art: site_reliability_engineering.png
   

@@ -36,9 +36,12 @@ def main_logic():
 
             if book.cover_art:
                 # duct tape
-                art += "<p align='center'>\n"
                 art += f"<img src='{book.cover_art}' alt='{book.title}_cover' width='160'>\n"
-                art += "</p>"
+                
+
+                if len(legend_titles) == 1:
+                    legend_titles = []
+                o = ""
             o += "\n"
 
             legend = format_legend(legend_titles)

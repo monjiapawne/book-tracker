@@ -10,10 +10,7 @@
 | DevOps HandBook |Gene Kim |▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100% |434/434 |
 
 ## Interested
-| Title |
-|--|
-| Atomic Habits |
 
-<p align='center'>
+
 <img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'>
-</p>
+<img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'>
