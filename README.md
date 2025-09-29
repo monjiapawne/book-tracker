@@ -1,15 +1,17 @@
 ## Reading
-| Title |Progress |Page |
-|--|--|--|
-| Effective Python |▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░ 23% |112/472 |
-| Site Reliability Engineering |▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% |63/550 |
-
-## Complete
 | Title |Author |Progress |Page |
 |--|--|--|--|
-| DevOps HandBook |Gene Kim |▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100% |434/434 |
+| Effective Python |Brett Slatkin |███████░░░░░░░░░░░░░░░░░░░░░░░ 23% |112/472 |
+| Site Reliability Engineering |Google |███░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% |63/550 |
+| Kubernetes 101 |Jeff Geerling |████████████░░░░░░░░░░░░░░░░░░ 41% |53/128 |
 
-## Interested
+## Read
 
 
-<p align='left'><p align='left'><img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'><img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'></p>
+<p align='left'><p align='left'><img src='cover_art/devops_handbook.jpg' alt='DevOps HandBook_cover' width='160'></p>
+
+## Future
+
+
+<p align='left'><p align='left'><img src='cover_art/fluent_python.png' alt='Fluent Python_cover' width='160'><img src='cover_art/nginx_cookbook.png' alt='Nginx Cookbook_cover' width='160'></p>
+

@@ -46,7 +46,7 @@ def main_logic():
                 if len(legend_titles) == 1:
                     legend_titles = []
                     art_start = "<p align='left'>"
-                    art_end = "</p>"
+                    art_end = "</p>\n\n"
                     
                 o = ""
             o += "\n"
@@ -56,6 +56,7 @@ def main_logic():
         columns = format_columns(len(legend_titles))
         # duct tape
         x += f"## {heading}\n{legend}{columns}{o}\n{art_start}{art_start}{art}{art_end}"
+        art = ""
         o = ""
         legend_titles = ["Title"]
 

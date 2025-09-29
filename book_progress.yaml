@@ -2,27 +2,30 @@ book_data:
   - heading: Reading
     books:
     - title: Effective Python
+      author: Brett Slatkin
       page: 112
       total_pages: 472
 
     - title: Site Reliability Engineering
-      author: 
+      author: Google
       page: 63
       total_pages: 550
+
+    - title: Kubernetes 101
+      author: Jeff Geerling
+      page: 53
+      total_pages: 128
   
 
-  - heading: Complete
+  - heading: Read
     books:
     - title: DevOps HandBook
-      author: Gene Kim
-      page: 434
-      total_pages: 434
+      cover_art: devops_handbook.jpg
 
 
-  - heading: Interested
+  - heading: Future
     books:
-    - title: Atomic Habits
-      cover_art: site_reliability_engineering.png
-    - title: Atomic Habits
-      cover_art: site_reliability_engineering.png
-  
+    - title: Fluent Python
+      cover_art: fluent_python.png
+    - title: Nginx Cookbook
+      cover_art: nginx_cookbook.png
