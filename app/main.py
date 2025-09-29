@@ -5,6 +5,7 @@ from app.io import write_readme
 def main():
     output = main_logic()
     write_readme(output)
+    print(output)
 
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ book_data:
   - heading: Complete
     books:
     - title: DevOps HandBook
-      author: James Clear
+      author: Gene Kim
       page: 434
       total_pages: 434
 
@@ -22,7 +22,5 @@ book_data:
   - heading: Interested
     books:
     - title: Atomic Habits
-      author: James Clear
-      page: 11
-      total_pages: 124
+      cover_art: site_reliability_engineering.png
   

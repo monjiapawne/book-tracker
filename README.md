@@ -1,13 +1,17 @@
 ## Reading
-| Title        | Author | Progress                   | Page                 |
-|--------------|--------|----------------------------|----------------------|
-| Effective Python |  | ▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░ 23% | 112/472 |
-| Site Reliability Engineering | None | ▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% | 63/550 |
+| Title |Progress |Page |
+|--|--|--|
+| Effective Python |▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░ 23% |112/472 |
+| Site Reliability Engineering |▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% |63/550 |
+
 ## Complete
-| Title        | Author | Progress                   | Page                 |
-|--------------|--------|----------------------------|----------------------|
-| DevOps HandBook | James Clear | ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100% | 434/434 |
+| Title |Author |Progress |Page |
+|--|--|--|--|
+| DevOps HandBook |Gene Kim |▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100% |434/434 |
+
 ## Interested
-| Title        | Author | Progress                   | Page                 |
-|--------------|--------|----------------------------|----------------------|
-| Atomic Habits | James Clear | ▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% | 11/124 |
+| Title |
+|--|
+| Atomic Habits |
+[Atomic Habits_cover](cover_art/site_reliability_engineering.png)
+

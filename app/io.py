@@ -1,7 +1,6 @@
 import yaml
 from pathlib import Path
 from app.models import Config, ProgressBarConfig, Book
-from app.helpers import calc_progress, render_progress_bar
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,27 +25,23 @@ def write_readme(s: str) -> None:
 
 
 # ---------- core book ingestion -------- #
-def process_book(book_data) -> Book:
+def process_book(b) -> Book:
     cfg = parse_config()
+    book = Book()
 
-    total_pages = book_data["total_pages"]
-    page = book_data["page"]
-    if page > total_pages:
-        page = total_pages
+    book.title = b.get("title")
+    book.author = b.get("author", None)
 
-    title = book_data.get("title") or ""
+    book.total_pages = b.get("total_pages", None)
 
-    progress: float = calc_progress(page, total_pages)
-    progress_bar = render_progress_bar(progress, cfg.progress_bar)
+    if b.get("page"):
+        book.set_page(b["page"])
 
-    author: str = book_data.get("author", "")
+    if book.page and book.total_pages:
+        book.calc_progress()
+        book.render_progress_bar(cfg.progress_bar)
 
-    book = Book(
-        title=title,
-        page_progress=f"{page}/{total_pages}",
-        progress=int(progress),
-        progress_bar=progress_bar,
-        author=author,
-    )
+    if b.get("cover_art"):
+        book.set_cover_art(b["cover_art"])
 
     return book
