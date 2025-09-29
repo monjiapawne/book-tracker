@@ -8,6 +8,9 @@ def main_logic():
     o = ""
     x = ""
     art = ""
+    art_start = ""
+    art_end = ""
+
     legend_titles = ["Title"]
     for section in raw_book_progress["book_data"]:
 
@@ -36,11 +39,15 @@ def main_logic():
 
             if book.cover_art:
                 # duct tape
-                art += f"<img src='{book.cover_art}' alt='{book.title}_cover' width='160'>\n"
+                
+                art += f"<img src='{book.cover_art}' alt='{book.title}_cover' width='160'>"
                 
 
                 if len(legend_titles) == 1:
                     legend_titles = []
+                    art_start = "<p align='left'>"
+                    art_end = "</p>"
+                    
                 o = ""
             o += "\n"
 
@@ -48,7 +55,7 @@ def main_logic():
 
         columns = format_columns(len(legend_titles))
         # duct tape
-        x += f"## {heading}\n{legend}{columns}{o}\n{art}"
+        x += f"## {heading}\n{legend}{columns}{o}\n{art_start}{art_start}{art}{art_end}"
         o = ""
         legend_titles = ["Title"]
 

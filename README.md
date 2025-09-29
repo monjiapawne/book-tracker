@@ -12,5 +12,4 @@
 ## Interested
 
 
-<img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'>
-<img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'>
+<p align='left'><p align='left'><img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'><img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'></p>
