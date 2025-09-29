@@ -13,5 +13,7 @@
 | Title |
 |--|
 | Atomic Habits |
-[Atomic Habits_cover](cover_art/site_reliability_engineering.png)
 
+<p align='center'>
+<img src='cover_art/site_reliability_engineering.png' alt='Atomic Habits_cover' width='160'>
+</p>
