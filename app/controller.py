@@ -7,6 +7,7 @@ def main_logic():
     raw_book_progress = parse_book_yaml()
     o = ""
     x = ""
+    art = ""
     legend_titles = ["Title"]
     for section in raw_book_progress["book_data"]:
 
@@ -34,14 +35,17 @@ def main_logic():
                     legend_titles.append("Page")
 
             if book.cover_art:
-                o += f"\n[{book.title}_cover]({book.cover_art})"
-
+                # duct tape
+                art += "<p align='center'>\n"
+                art += f"<img src='{book.cover_art}' alt='{book.title}_cover' width='160'>\n"
+                art += "</p>"
             o += "\n"
 
             legend = format_legend(legend_titles)
 
         columns = format_columns(len(legend_titles))
-        x += f"## {heading}\n{legend}{columns}{o}\n"
+        # duct tape
+        x += f"## {heading}\n{legend}{columns}{o}\n{art}"
         o = ""
         legend_titles = ["Title"]
 
