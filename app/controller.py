@@ -1,17 +1,18 @@
-from app.io import parse_book_yaml, process_book
+from app.utils.io import parse_book_yaml, process_book
 from app.models import Book
-from app.formatter import format_legend, format_columns
+from app.utils.formatter import format_legend, format_columns
+from app.services.process_book_data import format_book_table, format_cover_art
 
 
 def main_logic():
     raw_book_progress = parse_book_yaml()
-    o = ""
+    readme = ""
     x = ""
     art = ""
     art_start = ""
     art_end = ""
 
-    legend_titles = ["Title"]
+    legend_titles = ["Title", "Author", "Progress", "Page"]
     for section in raw_book_progress["book_data"]:
 
         heading = section["heading"]
@@ -19,45 +20,26 @@ def main_logic():
         for b in section["books"]:
             book = process_book(b)
 
-            o += "|"
-            o += f" {book.title} |"
-
-            if book.author:
-                o += f"{book.author} |"
-                if "Author" not in legend_titles:
-                    legend_titles.append("Author")
-
-            if book.progress_bar:
-                o += f"{book.progress_bar} {int(book.progress)}% |"
-                if "Progress" not in legend_titles:
-                    legend_titles.append("Progress")
-
-            if book.page_progress:
-                o += f"{book.page_progress} |"
-                if "Page" not in legend_titles:
-                    legend_titles.append("Page")
-
+            readme += format_book_table(book)
             if book.cover_art:
-                # duct tape
-                
-                art += f"<img src='{book.cover_art}' alt='{book.title}_cover' width='160'>"
-                
+                art += format_cover_art(book)
+
 
                 if len(legend_titles) == 1:
                     legend_titles = []
                     art_start = "<p align='left'>"
                     art_end = "</p>\n\n"
                     
-                o = ""
-            o += "\n"
+                readme = ""
+            readme += "\n"
 
             legend = format_legend(legend_titles)
 
         columns = format_columns(len(legend_titles))
         # duct tape
-        x += f"## {heading}\n{legend}{columns}{o}\n{art_start}{art_start}{art}{art_end}"
+        x += f"## {heading}\n{legend}{columns}{readme}\n{art_start}{art_start}{art}{art_end}"
         art = ""
-        o = ""
+        readme = ""
         legend_titles = ["Title"]
 
     return x

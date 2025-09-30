@@ -1,9 +1,9 @@
 ## Reading
 | Title |Author |Progress |Page |
 |--|--|--|--|
-| Effective Python |Brett Slatkin |███████░░░░░░░░░░░░░░░░░░░░░░░ 23% |112/472 |
-| Site Reliability Engineering |Google |███░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% |63/550 |
-| Kubernetes 101 |Jeff Geerling |████████████░░░░░░░░░░░░░░░░░░ 41% |53/128 |
+|Effective Python |Brett Slatkin |███████░░░░░░░░░░░░░░░░░░░░░░░ 23% |112/472 |
+|Site Reliability Engineering |Google |███░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11% |63/550 |
+|Kubernetes 101 |Jeff Geerling |████████████░░░░░░░░░░░░░░░░░░ 41% |53/128 |
 
 ## Read
 

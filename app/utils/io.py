@@ -2,7 +2,7 @@ import yaml
 from pathlib import Path
 from app.models import Config, ProgressBarConfig, Book
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 def parse_config() -> Config:
