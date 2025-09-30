@@ -1,5 +1,10 @@
 config:
   progress_bar:
-    length: 30
+    length: 15
     fill_char: "█"
     empty_char: "░"
+  cover_art:
+    margin: 0
+    height: 240
+    width: 160
+    scale: .8

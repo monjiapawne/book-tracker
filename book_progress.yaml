@@ -10,11 +10,13 @@ book_data:
       author: Google
       page: 82
       total_pages: 550
+      cover_art: site_reliability_engineering.png
 
     - title: Kubernetes 101
       author: Jeff Geerling
       page: 53
       total_pages: 128
+      cover_art: kubernetes_101.png
 
 
   - heading: Read

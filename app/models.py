@@ -9,11 +9,17 @@ class ProgressBarConfig:
     fill_char: str
     empty_char: str
 
+@dataclass
+class CoverArt:
+    margin: int = 5
+    width: int = 160
+    height: int = 240
+    scale: int = 1
 
 @dataclass
 class Config:
     progress_bar: ProgressBarConfig
-
+    cover_art: CoverArt
 
 @dataclass
 class Book:

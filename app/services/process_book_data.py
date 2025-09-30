@@ -1,4 +1,4 @@
-from app.models import Book
+from app.models import Book, CoverArt
 
 def format_book_table(book: Book, readme: str = ""):
     parts = [
@@ -12,8 +12,13 @@ def format_book_table(book: Book, readme: str = ""):
     return readme
 
 
-def format_cover_art(book: Book, art: str = ""):
-    art += f"<img src='{book.cover_art}' alt='{book.title}_cover' width='160'>"
+def format_cover_art(book: Book, config: CoverArt, art: str = "") -> str:
+    art += (
+        f"<img src='{book.cover_art}' alt='{book.title}_cover' "
+        f"style='width:{config.width * config.scale}px; height:{config.height * config.scale}px; "
+        f"object-fit:cover; margin:{config.margin}px; "
+        f"display:inline-block; vertical-align:top;'/>"
+    )
     return art
 
 

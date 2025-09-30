@@ -1,6 +1,6 @@
 import yaml
 from pathlib import Path
-from app.models import Config, ProgressBarConfig, Book
+from app.models import Config, ProgressBarConfig, Book, CoverArt
 from app.utils.logging import logger
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
@@ -8,9 +8,12 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 def parse_config() -> Config:
     with open(ROOT_DIR / "config.yaml", "r") as f:
-        raw = yaml.safe_load(f.read())
+        raw = yaml.safe_load(f)
 
-    return Config(progress_bar=ProgressBarConfig(**raw["config"]["progress_bar"]))
+    return Config(
+        progress_bar=ProgressBarConfig(**raw["config"]["progress_bar"]),
+        cover_art=CoverArt(**raw["config"]["cover_art"])
+    )
 
 
 # ---------- helpers -------- #
@@ -26,8 +29,7 @@ def write_readme(s: str) -> None:
 
 
 # ---------- core book ingestion -------- #
-def process_book(b) -> Book:
-    cfg = parse_config()
+def process_book(b, cfg: Config) -> Book:
     book = Book()
 
     book.title = b.get("title")

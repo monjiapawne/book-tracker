@@ -1,4 +1,4 @@
-from app.utils.io import parse_book_yaml, process_book
+from app.utils.io import parse_book_yaml, process_book, parse_config
 from app.models import Book
 from app.utils.formatter import format_legend, format_columns, format_art
 from app.services.process_book_data import format_book_table, format_cover_art, detect_fields
@@ -6,6 +6,7 @@ from app.utils.logging import logger
 
 
 def generate_md() -> str:
+    cfg = parse_config()
     raw_book_progress = parse_book_yaml()
     doc = ""
 
@@ -19,12 +20,13 @@ def generate_md() -> str:
         logger.info(f"processing section: {heading}")
 
         for b in section["books"]:
-            book: Book = process_book(b)
+            
+            book: Book = process_book(b, cfg)
             book_list.append(book)
             rows.append(format_book_table(book))
             
             if book.cover_art:
-                art_list.append(format_cover_art(book))
+                art_list.append(format_cover_art(book, cfg.cover_art))
 
         rows_all = "\n".join(rows)
 
