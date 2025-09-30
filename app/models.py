@@ -26,7 +26,6 @@ class Book:
     author: str = ""
     cover_art: Optional[str] = ""
 
-
     def set_page(self, value: int):
         if self.total_pages is not None and value > self.total_pages:
             self.page = self.total_pages

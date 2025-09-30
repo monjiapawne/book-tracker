@@ -8,14 +8,14 @@ book_data:
 
     - title: Site Reliability Engineering
       author: Google
-      page: 63
+      page: 82
       total_pages: 550
 
     - title: Kubernetes 101
       author: Jeff Geerling
       page: 53
       total_pages: 128
-  
+
 
   - heading: Read
     books:

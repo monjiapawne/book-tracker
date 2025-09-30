@@ -10,10 +10,13 @@ def format_columns(count: int) -> str:
 
 
 def format_legend(titles):
-    if len(titles) > 0:
-        legend = "| "
-        for title in titles:
-            legend += f"{title} |"
-        return f"{legend}\n"
-    else:
+    legend = "| "
+    for title in titles:
+        legend += f"{title} |"
+    return f"{legend}\n"
+
+
+def format_art(images: list[str]) -> str:
+    if not images:
         return ""
+    return "<p align='left'>" + "".join(images) + "</p>\n\n"

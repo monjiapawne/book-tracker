@@ -3,7 +3,7 @@ import logging
 LOG_FORMAT = "[%(levelname)s] [%(funcName)s] %(message)s"
 
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.WARNING,
     format=LOG_FORMAT,
 )
 
