@@ -5,7 +5,7 @@ from app.services.process_book_data import format_book_table, format_cover_art, 
 from app.utils.logging import logger
 
 
-def main_logic() -> str:
+def generate_md() -> str:
     raw_book_progress = parse_book_yaml()
     doc = ""
 
@@ -16,6 +16,7 @@ def main_logic() -> str:
         book_list: list[Book] = []
 
         heading = section["heading"]
+        logger.info(f"processing section: {heading}")
 
         for b in section["books"]:
             book: Book = process_book(b)

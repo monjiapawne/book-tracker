@@ -1,10 +1,9 @@
-from app.controller import main_logic
+from app.controller import generate_md
 from app.utils.io import write_readme
 
 
 def main():
-    output = main_logic()
-    write_readme(output)
+    write_readme(generate_md())
 
 
 if __name__ == "__main__":

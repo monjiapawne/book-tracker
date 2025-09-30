@@ -1,8 +1,6 @@
 from app.models import Book
-from app.utils.logging import logger
 
 def format_book_table(book: Book, readme: str = ""):
-
     parts = [
         f"{book.title} |",
         f"{book.author} |" if book.author else " |",
@@ -11,7 +9,6 @@ def format_book_table(book: Book, readme: str = ""):
     ]
     
     readme += "|" + "".join(parts)
-    logger.info(readme)
     return readme
 
 

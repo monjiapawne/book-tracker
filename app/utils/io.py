@@ -1,6 +1,7 @@
 import yaml
 from pathlib import Path
 from app.models import Config, ProgressBarConfig, Book
+from app.utils.logging import logger
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -30,6 +31,7 @@ def process_book(b) -> Book:
     book = Book()
 
     book.title = b.get("title")
+    logger.info(f"processing book: {book.title}")
     book.author = b.get("author", None)
 
     book.total_pages = b.get("total_pages", None)
