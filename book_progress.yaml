@@ -5,7 +5,7 @@ book_data:
       margin: 2
       height: 240
       width: 160
-      scale: .4
+      scale: .7
 
     books:
     - title: Effective Python
@@ -35,7 +35,7 @@ book_data:
       scale: 1.4
     books:
     - title: DevOps HandBook
-      cover_art: devops_handbook.jpg
+      cover_art: devops_handbook.png
 
 
   - heading: Future

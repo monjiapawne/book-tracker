@@ -15,58 +15,13 @@ def format_book_table(book: Book, readme: str = ""):
     return readme
 
 
-
 def format_cover_art(book: Book, config: CoverArt, art: str = "") -> str:
-    # tilt
-    # clean
-    addons_clean = (
-        "border-radius:12px; "
-        "box-shadow:0 4px 8px rgba(0,0,0,0.3); "
-        "filter: brightness(105%) contrast(105%); "
-        "padding:4px; "
-    )
-
-    # Neon glow
-    addons_neon = (
-        "border-radius:8px; "
-        "box-shadow:0 0 12px rgba(0,255,255,0.8); "
-        "filter: brightness(120%) saturate(150%); "
-    )
-
-    # Vintage / Sepia
-    addons_vintage = (
-        "border: 2px solid #654321; "
-        "filter: sepia(100%) contrast(120%) brightness(90%); "
-    )
-
-    # Black & White
-    addons_bw = (
-        "filter: grayscale(100%) contrast(110%); "
-    )
-
-    # tilt
-    deg = random.randint(-3, 3)
-    scale = random.uniform(1, 1.1)
-    # Tilted / Dynamic
-    addons_tilt = (
-        "border-radius:6px; "
-        "box-shadow:0 6px 10px rgba(0,0,0,0.4); "
-        f"transform: rotate({deg}deg) scale({scale}); "
-    )
-
-    # Glow / Highlight
-    addons_glow = (
-        "filter: drop-shadow(0 0 8px gold) brightness(115%); "
-    )
-
+    width = int(config.width * config.scale)
+    height = int(config.height * config.scale)
 
     art += (
         f"<img src='{book.cover_art}' alt='{book.title}_cover' "
-        f"style='width:{config.width * config.scale}px; height:{config.height * config.scale}px; "
-        f"object-fit:cover; margin:{config.margin}px; "
-        f"display:inline-block; vertical-align:top; "
-        f"{addons_tilt}"
-        f"'/>"
+        f"width='{width}' height='{height}'>"
     )
     return art
 
