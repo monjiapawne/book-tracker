@@ -3,7 +3,7 @@ config:
     length: 15
     fill_char: "█"
     empty_char: "░"
-  cover_art:
+  global_cover_art:
     margin: 0
     height: 240
     width: 160

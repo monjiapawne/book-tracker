@@ -12,7 +12,7 @@ def parse_config() -> Config:
 
     return Config(
         progress_bar=ProgressBarConfig(**raw["config"]["progress_bar"]),
-        cover_art=CoverArt(**raw["config"]["cover_art"])
+        cover_art=CoverArt(**raw["config"]["global_cover_art"])
     )
 
 
@@ -28,24 +28,3 @@ def write_readme(s: str) -> None:
         f.write(s)
 
 
-# ---------- core book ingestion -------- #
-def process_book(b, cfg: Config) -> Book:
-    book = Book()
-
-    book.title = b.get("title")
-    logger.info(f"processing book: {book.title}")
-    book.author = b.get("author", None)
-
-    book.total_pages = b.get("total_pages", None)
-
-    if b.get("page"):
-        book.set_page(b["page"])
-
-    if book.page and book.total_pages:
-        book.calc_progress()
-        book.render_progress_bar(cfg.progress_bar)
-
-    if b.get("cover_art"):
-        book.set_cover_art(b["cover_art"])
-
-    return book
