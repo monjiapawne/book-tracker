@@ -35,7 +35,6 @@ def generate_md() -> str:
 
         rows_all = "\n".join(rows)
 
-        # wip
         legend_titles = detect_fields(book_list)
         if legend_titles != ["Title"]:
             legend = format_legend(legend_titles)
