@@ -1,5 +1,6 @@
 ## About `book_tracker`
-book_tracker is a `YAML` configured book tracker, that renders to markdown, targeted for `gfm`. It is meant to be very high level, while still providing a solid level of customization.
+- `book_tracker` is a `YAML` configured book tracker, that renders to markdown, targeted for `gfm`.  
+- It is meant to be very high level, while still providing a solid level of customization.
 
 ## Reading
 
@@ -23,3 +24,9 @@ Book I've read.
 <p align='left'><img src='cover_art/cover_art_post/fluent_python.png' alt='Fluent Python_cover' width='150' height='225'><img src='cover_art/cover_art_post/nginx_cookbook.png' alt='Nginx Cookbook_cover' width='150' height='225'></p>
 
 Future books I'll read.
+#### Investigate Further
+
+
+<p align='left'><img src='cover_art/cover_art_post/fluent_python.png' alt='Fluent Python_cover' width='150' height='225'><img src='cover_art/cover_art_post/nginx_cookbook.png' alt='Nginx Cookbook_cover' width='150' height='225'></p>
+
+

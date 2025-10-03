@@ -1,7 +1,9 @@
 book_data:
 
   - heading: About `book_tracker`
-    comment_before: "book_tracker is a `YAML` configured book tracker, that renders to markdown, targeted for `gfm`. It is meant to be very high level, while still providing a solid level of customization."
+    comment_before: | 
+      - `book_tracker` is a `YAML` configured book tracker, that renders to markdown, targeted for `gfm`.
+      - It is meant to be very high level, while still providing a solid level of customization.
 
   - heading: Reading
     cover_art:
@@ -38,6 +40,14 @@ book_data:
 
   - heading: Future
     comment_after: "Future books I'll read."
+    books:
+    - title: Fluent Python
+      cover_art: fluent_python.png
+    - title: Nginx Cookbook
+      cover_art: nginx_cookbook.png
+
+  - heading: Investigate Further
+    heading_depth: 4
     books:
     - title: Fluent Python
       cover_art: fluent_python.png

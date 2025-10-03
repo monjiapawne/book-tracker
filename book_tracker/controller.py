@@ -25,8 +25,17 @@ def generate_md() -> str:
         books: list[Book] = []
 
         heading = section["heading"]
-        comment_before = section.get("comment_before", "") + "\n"
-        comment_after = section.get("comment_after", "") + "\n"
+        heading_depth = int(section.get("heading_depth", 2))
+
+
+
+        comments_before = section.get("comment_before", "").splitlines()
+        comment_before = ("  \n".join(comments_before) + "\n")
+        comments_after = section.get("comment_after", "").splitlines()
+        comment_after = ("  \n".join(comments_after) + "\n")
+
+        
+        
         logger.info(f"processing section: {heading}")
 
         section_cover_cfg: dict = section.get("cover_art", {})
@@ -54,9 +63,9 @@ def generate_md() -> str:
                 legend = columns = rows_str = ""
 
             art = format_art(cover_imgs)
-
+            
             parts = [
-                f"## {heading}\n",
+                f"{'#' * heading_depth} {heading}\n",
                 comment_before,
                 legend,
                 columns,
@@ -67,9 +76,10 @@ def generate_md() -> str:
             doc += "".join(parts)
         else:
             parts = [
-                f"## {heading}\n",
+                f"{'#' * heading_depth} {heading}\n",
                 comment_before,
                 comment_after
             ]
             doc += "".join(parts)
+            
     return doc
