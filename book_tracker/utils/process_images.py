@@ -11,7 +11,7 @@ def resize_image(cover_art: Path, width=300, height=450) -> Path:
     makedirs(output_folder, exist_ok=True)
     output_path = output_folder / cover_art.name
     if Path(output_path).exists():
-        return output_path
+        return output_path.relative_to(ROOT_DIR)
 
     img = Image.open(cover_art)
     original_width, original_height = img.size
@@ -33,7 +33,7 @@ def resize_image(cover_art: Path, width=300, height=450) -> Path:
 
     _clean_post_folder(COVER_ART_FOLDER, output_folder)
 
-    return output_path
+    return output_path.relative_to(ROOT_DIR)
 
 
 def _clean_post_folder(trusted_dir: Path, untrusted_dir: Path):
