@@ -5,7 +5,7 @@ book_data:
 
   - heading: Reading
     cover_art:
-      scale: 1
+      scale: .5
 
     books:
     - title: Effective Python
