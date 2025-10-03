@@ -5,7 +5,7 @@ from book_tracker.utils.logging import logger
 
 def main() -> int:
     write_readme(generate_md())
-    logger.info("✅ Updated README.md")
+    logger.info("Updated README.md")
     return 0
 
 

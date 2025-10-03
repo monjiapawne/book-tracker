@@ -8,3 +8,8 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("app")
+
+# supressing PIL logs
+logging.getLogger("PIL").setLevel(logging.WARNING)
+logging.getLogger("PIL.ImageFile").setLevel(logging.WARNING)
+logging.getLogger("PIL.PngImagePlugin").setLevel(logging.WARNING)

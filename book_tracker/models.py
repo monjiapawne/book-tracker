@@ -12,10 +12,9 @@ class ProgressBarConfig:
 
 @dataclass
 class CoverArt:
-    margin: int = 5
-    width: int = 160
-    height: int = 240
-    scale: int = 1
+    scale: float = 0.5
+    width: int = 300
+    height: int = 450
 
 
 @dataclass

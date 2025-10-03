@@ -1,6 +1,7 @@
 from book_tracker.models import Book, CoverArt
 from book_tracker.utils.logging import logger
 from book_tracker.models import Book
+from book_tracker.utils.process_images import resize_image
 
 
 def render_table_row(book: Book, readme: str = ""):
@@ -16,10 +17,13 @@ def render_table_row(book: Book, readme: str = ""):
 
 
 def render_cover_img(book: Book, config: CoverArt, art: str = "") -> str:
-    width = int(config.width * config.scale)
-    height = int(config.height * config.scale)
+    width = int(config.width * (config.scale / 2))
+    height = int(config.height * (config.scale / 2))
+    cover_art_path = resize_image(
+        book.cover_art, width=config.width, height=config.height
+    )
     art += (
-        f"<img src='{book.cover_art}' alt='{book.title}_cover' "
+        f"<img src='{cover_art_path}' alt='{book.title}_cover' "
         f"width='{width}' height='{height}'>"
     )
     return art

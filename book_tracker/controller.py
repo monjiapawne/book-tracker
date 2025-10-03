@@ -12,7 +12,7 @@ from book_tracker.utils.logging import logger
 
 def generate_md() -> str:
     """Return markdown formated tables and headings
-    
+
     High level, pull yaml, generate books, generate markdown table
     """
     cfg = load_config()
@@ -25,6 +25,8 @@ def generate_md() -> str:
         books: list[Book] = []
 
         heading = section["heading"]
+        comment_before = section.get("comment_before", "") + "\n"
+        comment_after = section.get("comment_after", "") + "\n"
         logger.info(f"processing section: {heading}")
 
         section_cover_cfg: dict = section.get("cover_art", {})
@@ -52,7 +54,15 @@ def generate_md() -> str:
 
         art = format_art(cover_imgs)
 
-        parts = [f"## {heading}\n", legend, columns, f"{rows_str}\n", art]
+        parts = [
+            f"## {heading}\n",
+            comment_before,
+            legend,
+            columns,
+            f"{rows_str}\n",
+            art,
+            comment_after,
+        ]
         doc += "".join(parts)
 
     return doc

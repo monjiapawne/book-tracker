@@ -2,10 +2,7 @@ book_data:
 
   - heading: Reading
     cover_art:
-      margin: 2
-      height: 240
-      width: 160
-      scale: .7
+      scale: 1
 
     books:
     - title: Effective Python
@@ -29,16 +26,15 @@ book_data:
 
   - heading: Read
     cover_art:
-      margin: 4
-      height: 240
-      width: 160
-      scale: 1.4
+      scale: 1
+    comment_before: "Book I've read."
     books:
     - title: DevOps HandBook
       cover_art: devops_handbook.png
 
 
   - heading: Future
+    comment_after: "Future books I'll read."
     books:
     - title: Fluent Python
       cover_art: fluent_python.png

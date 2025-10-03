@@ -2,17 +2,16 @@ import yaml
 from pathlib import Path
 from book_tracker.models import Config, ProgressBarConfig, Book, CoverArt
 from book_tracker.utils.logging import logger
-
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+from book_tracker.settings import ROOT_DIR
 
 
 def load_config() -> Config:
     with open(ROOT_DIR / "config.yaml", "r") as f:
-        raw = yaml.safe_load(f)
+        raw_data = yaml.safe_load(f)
 
     return Config(
-        progress_bar=ProgressBarConfig(**raw["config"]["progress_bar"]),
-        cover_art=CoverArt(**raw["config"]["global_cover_art"]),
+        progress_bar=ProgressBarConfig(**raw_data["config"]["progress_bar"]),
+        cover_art=CoverArt(**raw_data["config"]["global_cover_art"]),
     )
 
 

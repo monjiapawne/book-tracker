@@ -4,7 +4,6 @@ config:
     fill_char: "█"
     empty_char: "░"
   global_cover_art:
-    margin: 0
-    height: 240
-    width: 160
-    scale: .8
+    scale: 1
+    width: 300
+    height: 450
