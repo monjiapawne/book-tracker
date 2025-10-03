@@ -1,3 +1,6 @@
+## About `book_tracker`
+book_tracker is a `YAML` configured book tracker, that renders to markdown, targeted for `gfm`. It is meant to be very high level, while still providing a solid level of customization.
+
 ## Reading
 
 | Title |Author |Progress |Page |

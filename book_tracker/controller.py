@@ -31,38 +31,45 @@ def generate_md() -> str:
 
         section_cover_cfg: dict = section.get("cover_art", {})
 
-        for b in section["books"]:
-            book: Book = build_book(b, cfg)
-            books.append(book)
-            table_rows.append(render_table_row(book))
+        if section.get("books"):
+            for b in section["books"]:
+                book: Book = build_book(b, cfg)
+                books.append(book)
+                table_rows.append(render_table_row(book))
 
-            if book.cover_art:
-                # unpack global config and local. local overlap global
-                merged_dict = {**cfg.cover_art.__dict__, **section_cover_cfg}
-                # create a new object to pass in
-                merged_cfg = CoverArt(**merged_dict)
-                cover_imgs.append(render_cover_img(book, merged_cfg))
+                if book.cover_art:
+                    # unpack global config and local. local overlap global
+                    merged_dict = {**cfg.cover_art.__dict__, **section_cover_cfg}
+                    # create a new object to pass in
+                    merged_cfg = CoverArt(**merged_dict)
+                    cover_imgs.append(render_cover_img(book, merged_cfg))
 
-        rows_str = "\n".join(table_rows)
+            rows_str = "\n".join(table_rows)
 
-        fields = detect_fields(books)
-        if fields != ["Title"]:
-            legend = format_legend(fields)
-            columns = format_columns(len(fields))
+            fields = detect_fields(books)
+            if fields != ["Title"]:
+                legend = format_legend(fields)
+                columns = format_columns(len(fields))
+            else:
+                legend = columns = rows_str = ""
+
+            art = format_art(cover_imgs)
+
+            parts = [
+                f"## {heading}\n",
+                comment_before,
+                legend,
+                columns,
+                f"{rows_str}\n",
+                art,
+                comment_after,
+            ]
+            doc += "".join(parts)
         else:
-            legend = columns = rows_str = ""
-
-        art = format_art(cover_imgs)
-
-        parts = [
-            f"## {heading}\n",
-            comment_before,
-            legend,
-            columns,
-            f"{rows_str}\n",
-            art,
-            comment_after,
-        ]
-        doc += "".join(parts)
-
+            parts = [
+                f"## {heading}\n",
+                comment_before,
+                comment_after
+            ]
+            doc += "".join(parts)
     return doc
