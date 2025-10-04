@@ -5,6 +5,30 @@ book_data:
       - `book_tracker` is a `YAML` configured book tracker, that renders to markdown, targeted for `gfm`.
       - It is meant to be very high level, while still providing a solid level of customization.
 
+      ## How to setup
+      - Fork this repo
+      - Configure `book_process.yaml`
+      - (Optional) Configure `config.yaml`
+
+      ### `book_process.yaml` fields
+      ```yaml
+      book_data:
+        - heading: heading name
+          heading_depth: 4
+          
+        cover_art:
+          scale: scale of cover art, or set in config globally
+        comment_before: comment before books
+        comment_after: comment after books
+
+        books:
+        - title: book title
+          auther: author
+          page: current page
+          total_pages: total pages
+          cover_art: name_of_cover_art.png
+      ```
+
   - heading: Reading
     cover_art:
       scale: .5
