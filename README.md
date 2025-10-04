@@ -6,8 +6,10 @@
 - Fork this repo  
 - Configure `book_process.yaml`  
 - (Optional) Configure `config.yaml`  
+- Upload cover art to ./cover_art
   
-### `book_process.yaml` fields  
+### `book_process.yaml` fields
+
 ```yaml  
 book_data:  
   - heading: heading name  
@@ -24,6 +26,10 @@ book_data:
     page: current page  
     total_pages: total pages  
     cover_art: name_of_cover_art.png  
+```
+
+### `config.yaml` fields
+```yaml
 ```
 
 ## Reading
