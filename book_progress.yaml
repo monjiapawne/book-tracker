@@ -61,9 +61,16 @@ book_data:
 
     - title: Kubernetes 101
       author: Jeff Geerling
-      page: 53
+      page: 55
       total_pages: 128
       cover_art: kubernetes_101.png
+
+      
+    - title: The Code Book
+      author: Simon Singh
+      page: 92
+      total_pages: 273
+      cover_art: the_code_book.png
 
 
   - heading: Read
@@ -76,7 +83,7 @@ book_data:
 
 
   - heading: Future
-    comment_after: "Future books I'll read."
+    comment_before: "Future books I'll read."
     books:
     - title: Fluent Python
       cover_art: fluent_python.png

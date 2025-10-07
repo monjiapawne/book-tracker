@@ -1,6 +1,6 @@
 config:
   progress_bar:
-    length: 15
+    length: 31
     fill_char: "█"
     empty_char: "░"
   global_cover_art:

@@ -1,0 +1,43 @@
+name: Run book tracker
+on:
+  push:
+    paths:
+      - 'book_progress.yaml'
+      - 'config.yaml'
+      - '.github/workflows/run.yml' 
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.8.23"
+          enable-cache: true
+
+      - name: Install requirements
+        run: uv pip install -r requirements.txt
+        env:
+          UV_SYSTEM_PYTHON: 1
+
+      - name: Run book_tracker
+        run: python -m book_tracker.cli
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main --unshallow
+          git add README.md cover_art/cover_art_post/ || echo "No new files"
+          if ! git diff --cached --quiet; then
+            git commit --amend --no-edit --quiet || true
+            git push --force-with-lease --quiet
+          else
+            echo "No changes to commit"
+          fi
