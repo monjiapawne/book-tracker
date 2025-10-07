@@ -29,6 +29,19 @@ book_data:
           cover_art: name_of_cover_art.png
       ```
 
+      ### `config.yaml` fields
+      ```yaml
+      config:
+        progress_bar:
+          length: length of bar
+          fill_char: fill emoji
+          empty_char: unfilled emoji
+        global_cover_art:
+          scale: scale multiplier
+          width: width in px
+          height: height in px
+      ```
+
   - heading: Reading
     cover_art:
       scale: .5
