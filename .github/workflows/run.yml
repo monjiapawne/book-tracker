@@ -27,7 +27,7 @@ jobs:
           UV_SYSTEM_PYTHON: 1
 
       - name: Run book_tracker
-        run: python -m book_tracker.cli
+        run: python -m bt.cli
 
       - name: Commit and push changes
         run: |
