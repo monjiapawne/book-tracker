@@ -46,7 +46,7 @@ config:
 |Effective Python |Brett Slatkin |███████░░░░░░░░░░░░░░░░░░░░░░░░ 23% |112/472 |
 |Site Reliability Engineering |Google |████░░░░░░░░░░░░░░░░░░░░░░░░░░░ 14% |82/550 |
 |Kubernetes 101 |Jeff Geerling |█████████████░░░░░░░░░░░░░░░░░░ 42% |55/128 |
-|The Code Book |Simon Singh |██████████░░░░░░░░░░░░░░░░░░░░░ 33% |92/273 |
+|The Code Book |Simon Singh |██████████░░░░░░░░░░░░░░░░░░░░░ 34% |93/273 |
 <p align='left'><img src='cover_art/cover_art_post/effective_python.png' alt='Effective Python_cover' width='75' height='112'><img src='cover_art/cover_art_post/site_reliability_engineering.png' alt='Site Reliability Engineering_cover' width='75' height='112'><img src='cover_art/cover_art_post/kubernetes_101.png' alt='Kubernetes 101_cover' width='75' height='112'><img src='cover_art/cover_art_post/the_code_book.png' alt='The Code Book_cover' width='75' height='112'></p>
 
 
