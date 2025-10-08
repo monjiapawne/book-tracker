@@ -14,6 +14,6 @@ def comments(section: dict) -> tuple[str, str]:
     return comment_before, comment_after
 
 
-def cover_art_cfg(cfg: Config, section_cover_cfg: dict):
+def cover_art_cfg(cfg: Config, section_cover_cfg: dict) -> CoverArt:
     merged_dict = {**cfg.cover_art.__dict__, **section_cover_cfg}
     return CoverArt(**merged_dict)
