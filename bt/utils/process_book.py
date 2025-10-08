@@ -1,5 +1,5 @@
-from book_tracker.models import Book, Config
-from book_tracker.utils.logging import logger
+from bt.models import Book, Config
+from bt.utils.logging import logger
 
 
 def build_book(b: dict, cfg: Config) -> Book:

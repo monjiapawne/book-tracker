@@ -1,8 +1,8 @@
 from pathlib import Path
 from PIL import Image
 from os import listdir, makedirs, remove
-from book_tracker.settings import ROOT_DIR, COVER_ART_FOLDER
-from book_tracker.utils.logging import logging
+from bt.settings import ROOT_DIR, COVER_ART_FOLDER
+from bt.utils.logging import logging
 
 output_folder = COVER_ART_FOLDER / "cover_art_post"
 

@@ -1,7 +1,7 @@
-from book_tracker.models import Book, CoverArt
-from book_tracker.utils.logging import logger
-from book_tracker.models import Book
-from book_tracker.utils.process_images import resize_image
+from bt.models import Book, CoverArt
+from bt.utils.logging import logger
+from bt.models import Book
+from bt.utils.process_images import resize_image
 
 
 def render_table_row(book: Book, readme: str = ""):

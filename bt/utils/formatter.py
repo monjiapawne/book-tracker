@@ -1,12 +1,9 @@
 def format_columns(count: int) -> str:
-    if count > 0:
-        s = ""
-        for i in range(count):
-            s += "|--"
-        s += "|"
-        return f"{s}\n"
-    else:
+    if count is None:
         return ""
+    
+    s = "|--" * count + "|"
+    return f"{s}\n"
 
 
 def format_legend(titles):

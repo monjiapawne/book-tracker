@@ -92,6 +92,8 @@ book_data:
 
   - heading: Investigate Further
     heading_depth: 4
+    cover_art:
+      scale: 0.8
     books:
     - title: Fluent Python
       cover_art: fluent_python.png

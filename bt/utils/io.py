@@ -1,8 +1,8 @@
 import yaml
 from pathlib import Path
-from book_tracker.models import Config, ProgressBarConfig, Book, CoverArt
-from book_tracker.utils.logging import logger
-from book_tracker.settings import ROOT_DIR
+from bt.models import Config, ProgressBarConfig, Book, CoverArt
+from bt.utils.logging import logger
+from bt.settings import ROOT_DIR
 
 
 def load_config() -> Config:

@@ -52,19 +52,16 @@ config:
 
 ## Read
 Book I've read.
-
 <p align='left'><img src='cover_art/cover_art_post/devops_handbook.png' alt='DevOps HandBook_cover' width='150' height='225'></p>
 
 
 ## Future
 Future books I'll read.
-
 <p align='left'><img src='cover_art/cover_art_post/fluent_python.png' alt='Fluent Python_cover' width='150' height='225'><img src='cover_art/cover_art_post/nginx_cookbook.png' alt='Nginx Cookbook_cover' width='150' height='225'></p>
 
 
 #### Investigate Further
 
-
-<p align='left'><img src='cover_art/cover_art_post/fluent_python.png' alt='Fluent Python_cover' width='150' height='225'><img src='cover_art/cover_art_post/nginx_cookbook.png' alt='Nginx Cookbook_cover' width='150' height='225'></p>
+<p align='left'><img src='cover_art/cover_art_post/fluent_python.png' alt='Fluent Python_cover' width='120' height='180'><img src='cover_art/cover_art_post/nginx_cookbook.png' alt='Nginx Cookbook_cover' width='120' height='180'></p>
 
 
